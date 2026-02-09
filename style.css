@@ -78,7 +78,7 @@ body {
 	border: 2px solid #d6e6ff;
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 	scroll-snap-align: start;
-	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .timeline-card h2 {
@@ -120,14 +120,29 @@ body {
 	transition: max-height 0.2s ease, opacity 0.2s ease;
 }
 
-.timeline-card:hover {
-	transform: translateY(-4px);
+.timeline-card:hover,
+.timeline-card:focus-within {
+	transform: translateY(-4px) scale(1.02);
 	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+	background: #0b4ea2;
 }
 
-.timeline-card:hover .card-detail {
+.timeline-card:hover h2,
+.timeline-card:hover h3,
+.timeline-card:hover .card-summary,
+.timeline-card:hover .card-detail,
+.timeline-card:focus-within h2,
+.timeline-card:focus-within h3,
+.timeline-card:focus-within .card-summary,
+.timeline-card:focus-within .card-detail {
+	color: #ffffff;
+}
+
+.timeline-card:hover .card-detail,
+.timeline-card:focus-within .card-detail {
 	max-height: 140px;
 	opacity: 1;
+	border-top: 1px solid #7fb1ff;
 }
 
 .timeline-note {
