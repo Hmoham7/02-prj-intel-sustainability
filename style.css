@@ -93,6 +93,15 @@ body {
 	color: #124d84;
 }
 
+.card-image {
+	width: 100%;
+	height: 140px;
+	object-fit: cover;
+	border-radius: 12px;
+	border: 1px solid #e2ecff;
+	margin: 0 0 10px;
+}
+
 .card-summary {
 	margin: 0;
 	line-height: 1.5;
