@@ -15,7 +15,9 @@ body {
 /* Hero section */
 .hero {
 	padding: 48px 20px 32px;
-	background: linear-gradient(180deg, #0b4ea2, #0f74c9);
+	background: linear-gradient(135deg, #0b4ea2, #0f74c9, #0b3f86);
+	background-size: 200% 200%;
+	animation: hero-shift 8s ease-in-out infinite;
 	color: #ffffff;
 }
 
@@ -23,10 +25,23 @@ body {
 	text-align: center;
 }
 
+/* Smoothly shift the hero background colors */
+@keyframes hero-shift {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 .hero-logo {
 	display: block;
 	margin: 0 auto 16px;
-	width: 190px;
+	width: 80px;
 	height: auto;
 	background: #ffffff;
 	padding: 10px 16px;
